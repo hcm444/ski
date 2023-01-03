@@ -8,7 +8,7 @@ def get_weather_for_locations(coordinates_dict):
     weather_dict = {}
     for location, coordinates in coordinates_dict.items():
         lat, lng = coordinates
-        api_key = '<Opensky API key>'
+        api_key = '<OpenWeather API key>'
         api_url = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lng}&appid={api_key}&units=imperial'
         response = requests.get(api_url)
         data = response.json()
